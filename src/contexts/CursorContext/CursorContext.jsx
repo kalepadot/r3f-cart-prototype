@@ -11,7 +11,8 @@ const { theme } = resolveConfig(tailwindConfig);
 const INITIAL_STATE = {
   cursorStyle: {
     bordered: false,
-    color: theme.colors.red['ff'] || '#ff0000',
+    // color: theme.colors.red['ff'] || '#2596be',
+    color: '#ffffe0',
   },
   position: null,
 };

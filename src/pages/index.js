@@ -13,6 +13,11 @@ const MainScene = dynamic(() => import('@/components/MainScene'), {
 import CommonLayout from '@/layouts/CommonLayout';
 
 import { useTheme } from '@/hooks/useTheme';
+import { motion } from 'framer-motion';
+import { ease } from '@/styles/motion';
+import Cart from '@/components/Cart';
+import Navbar from '@/components/Navbar';
+import Ballpit from '@/components/Ballpit';
 
 const transition = {
   duration: 0.45,
@@ -24,10 +29,29 @@ export default function Home() {
 
   return (
     <CommonLayout>
-      <div className="min-h-[100vh] relative flex flex-none h-full">
-        <MainScene />
+      <div className="min-h-[100vh] ">
+        {/* <MainScene /> */}
+        <Ballpit />
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+            delay: 1.2,
+            ease,
+          }}
+        >
+          <main className="relative mx-auto ">
+            <Navbar />
+            <Cart />
+          </main>
+        </motion.div>
       </div>
-      <ArrowScroll />
+      {/* <ArrowScroll /> */}
     </CommonLayout>
   );
 }

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -8,12 +8,12 @@ export default function Navbar() {
       <div className="flex items-center justify-center md:justify-between ">
         <a
           className="pt-2 "
-          href="https://sandstone.la"
+          href="https://vercel.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src="logo.svg"
+            src="vercel.svg"
             alt="logo"
             className="transition duration-700 ease-in-out hover:scale-110"
           />

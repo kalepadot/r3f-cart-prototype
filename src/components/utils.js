@@ -1,18 +1,20 @@
+//I need to re-route this to the hooks folder
+
 function computeTotalValue(data, discountCode, lowestPrice) {
   let totalVal = 0;
   for (let i = 0; i < data.length; i++) {
     totalVal += data[i].price * data[i].quantity;
   }
-  if (discountCode === "FIFTY") {
+  if (discountCode === 'FIFTY') {
     return totalVal * 0.5;
   }
-  if (discountCode === "FREE") {
+  if (discountCode === 'FREE') {
     return totalVal - lowestPrice;
   }
   return totalVal;
 }
 function cartItemPriceDiscount(price, discountCode) {
-  if (discountCode === "FIFTY") {
+  if (discountCode === 'FIFTY') {
     return price * 0.5;
   } else {
     return price;
